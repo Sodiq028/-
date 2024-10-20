@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ДОМ</title>
+    <link rel="stylesheet" href="style.css">
     <link
       rel="shortcut icon"
       href="./images/ДОМ logo.png"
@@ -27,10 +28,11 @@
         extend: {
           colors: {
             bg_col: "var(--bg-col)",
-            yellow: "var(--yellow)",
-            gray: "var(--gray)",
-            black: "var(--black)",
-            white: "var(--white)",
+            m_burger: "var(--m_burger)",
+            m_yellow: "var(--m_yellow)",
+            m_gray: "var(--m_gray)",
+            m_black: "var(--m_black)",
+            m_white: "var(--m_white)",
             foot: "var(--foot)",
           }
         }
@@ -41,23 +43,156 @@
     @layer base {
         :root {
             --bg-col: #F5F5F5;
-            --yellow: #FFEB39;
-            --gray: #828282;
-            --black: #000000;
-            --white: #FFFFFF;
+            --m_burger: #e9e9e9;
+            --m_yellow: #FFEB39;
+            --m_gray: #828282;
+            --m_black: #000000;
+            --m_white: #FFFFFF;
             --foot: #4F4F4F;
         }
 
         .dark {
             --bg-col: #3a3a3a;
-            --gray: #fff;
-            --black: #fff;
-            --white: #000;
+            --m_burger: #4d4d4d;
+            --m_gray: #fff;
+            --m_black: #fff;
+            --m_white: #000;
         }
     }
   </style>
 </head>
-<body>
-    
+<body class="bg-bg_col duration-500">
+  <div
+  id="burger_menu"
+  class="h-screen w-[80%] flex flex-col items-start justify-start gap-6 p-[40px] -translate-x-[600px] bg-m_burger z-50 fixed duration-500"
+>
+  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
+    Home
+  </button>
+  <div class="h-[1px] w-[100%] bg-white"></div>
+  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
+    About
+  </button>
+  <div class="h-[1px] w-[100%] bg-white"></div>
+  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
+    Contact
+  </button>
+  <div class="h-[1px] w-[100%] bg-white"></div>
+  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
+    Service
+  </button>
+  <div class="h-[1px] w-[100%] bg-white"></div>
+  <button id="mode2">
+    <img
+      id="mode_icon2"
+      class="cursor-pointer"
+      src="https://cdn2.iconfinder.com/data/icons/canoopi-mobile-contact-apps/32/Dark_Theme-512.png"
+      alt=""
+      width="30"
+    />
+  </button>
+</div>
+    <header class="container sticky z-40 top-0 bg-bg_col duration-500 bg-bg-col flex flex-row items-center justify-between h-[80px]">
+      <div class="flex flex-row items-center gap-1">
+        <img src="/images/ДОМ logo.png" alt="" width="57" height="28">
+        <h1 class="text-m_black font-medium">Страхование</h1>
+      </div>
+      <div class="flex flex-row items-center gap-4">
+        <button id="mode">
+          <img
+            id="mode_icon"
+            class="flex cursor-pointer"
+            src="https://cdn2.iconfinder.com/data/icons/canoopi-mobile-contact-apps/32/Dark_Theme-512.png"
+            alt=""
+            width="20"
+          />
+        </button>
+        <img class="cursor-pointer" src="/images/user.png" alt="">
+        <img id="burger" class="cursor-pointer" src="/images/burger.png" alt="">
+      </div>
+    </header>
+    <main>
+      <section class="container mt-[20px] h-[500px] lg:h-[300px] flex flex-col gap-8 lg:gap-14">
+        <div class="flex flex-col items-center justify-center gap-3">
+          <h1 class="text-m_black font-geo font-medium text-[30px] text-center">Страхование 
+            ипотеки</h1>
+          <p class="text-m_black font-geo font-light text-[16px] text-center">Минимальная цена на обязательное ипотечное страхование</p>
+        </div>
+        <div class="bg-m_white duration-500 lg:hidden rounded-[30px] h-[289px] flex flex-col p-[20px] gap-2">
+          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Тип объекта</h1>
+              <h1 class="text-m_black font-geo text-[16px]">Квартира</h1>
+            </div>
+            <img src="/images/Arrow_dropdown.png" alt="">
+          </div>
+          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Банк кредитор</h1>
+              <h1 class="text-m_black font-geo text-[16px]">Сбербанк</h1>
+            </div>
+            <img src="/images/Arrow_dropdown.png" alt="">
+          </div>
+          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Остаток по ипотеке, ₽</h1>
+              <h1 class="text-m_black font-geo text-[16px]">100 000 ₽</h1>
+            </div>
+          </div>
+          <button class="bg-m_yellow border border-m_yellow hover:bg-transparent active:bg-m_yellow duration-300 py-[15px] rounded-[10px] font-geo text-m_black text-[17px]">Показать цены</button>
+        </div>
+        <div class="hidden lg:flex flex-row gap-2 items-center justify-center">
+          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Тип объекта</h1>
+              <h1 class="text-m_black font-geo text-[16px]">Квартира</h1>
+            </div>
+            <img src="/images/Arrow_dropdown.png" alt="">
+          </div>
+          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Банк кредитор</h1>
+              <h1 class="text-m_black font-geo text-[16px]">Сбербанк</h1>
+            </div>
+            <img src="/images/Arrow_dropdown.png" alt="">
+          </div>
+          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
+            <div class="flex flex-col">
+              <h1 class="text-m_gray font-geo text-[11px]">Остаток по ипотеке, ₽</h1>
+              <h1 class="text-m_black font-geo text-[16px]">100 000 ₽</h1>
+            </div>
+          </div>
+          <button class="bg-m_yellow border border-m_yellow hover:bg-transparent active:bg-m_yellow duration-300 px-10 py-[15px] rounded-[10px] font-geo text-m_black text-[17px]">Показать цены</button>
+        </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
+          <div class="w-[294px] h-[355px] relative">
+            <img class="rounded-t-[30px]" width="294" src="https://s3-alpha-sig.figma.com/img/86b0/bf77/576b0796dbdf53b116db6dc02be74ec9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BImcjA7WSuEOV6fwSXsdt46z-8KOEKYIXuKi47mzPwfyAgnHYowgozFkpGlPBxjvQlqUQubiLpjO1U6eKEOUsNb3kpfkYFCKviHSULKzGurE0FOso~4f2cjc7uzHrNwJufBcAHrd2oPmtWaKmFEIQkENYCDbyg9yYBKDAcydR~LTeJtcgVZWbCd-0pJOBtfhePMFgMk3B6bJbi2yDSIJXvNDDCW551Bm3BzWn4nMjxLym9HgNtHiy2R0ZenEUqeUEIDFILykEYZSP6-gwFClmHMVeXtKFW8v51Xdwnys8B9~SzQEPnEsAnqNHdqE8ZRc4ICe7h3VlhnnQQmztv4yyg__" alt="">
+            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
+              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
+              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
+            </div>
+          </div>
+          <div class="w-[294px] h-[355px] relative">
+            <img class="rounded-t-[30px] h-[300px]" width="294" src="https://s3-alpha-sig.figma.com/img/78b9/1c84/a645f613fc778beb313e5fc543bf5432?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b3ZkyTnJXI~nMY9YAmoDGFAx6BUUBadKqTbrfdCNH5EOq~M3xdEJCc5ay~OArrW~nKn6s6a99rDbPX~cEzT3qRBpX0Kv-OhT~OY46oN4RZMWpd-eOavbmdkLRREzGZVX-xrtz3z~Kw-yFabpn2BN9fkqpCM9vPBw4Fn5XBn2fZBbezvB6xdt7UBYYGNQAQ~sNwrAmGrbRUwlV1YlacvmwxoveKced5AWV8PXBANgRceyS-vW8Lz2Hx1MnlZvbvk-yPpzdnqe4-rR9VIBtn-GU0ZbSUe67G2zIQOdedie3-4ZxVjfKHc7eAVZZSJPi1YYxb~QmSsVY1JpjOTcRaNRsA__" alt="">
+            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
+              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
+              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
+            </div>
+          </div>
+          <div class="w-[294px] h-[355px] relative">
+            <img class="rounded-t-[30px]" width="294" src="https://s3-alpha-sig.figma.com/img/0181/f494/565c83430d4c32e99592f2e34f5d7bfb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EPoSTbKlxIKd7WmLXHekT4o5WZVGWgUDFxWObiYvrVQUDfth86BDqro-cCQHD0wuYxfElbB4MQ4cD6pZlVQ32x5Nv2~faNwKgz3~mJ9Czjos7hfsnMECScYNYIJGCaGqy3C5mJg-VUHCcM8fizJYH2IFC0DBzYbiBNsY-O3min~VPGxa1UaZ~vA30B1x-6EksCyLskWI45Y0Twzr4oqWTFWmVbEubxCtpyjd~TAxvOVgg8UE9xQBHwrRnXDdML9LixgVb3XOuEHQFfLBptCIMWvhmBOgxTVue86V-lKV2wI0heDfC0TBHAUmUfO7bPJ2FqI2vO9ZuYJl7lOY6IR~iA__" alt="">
+            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
+              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
+              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/index.js"></script>
 </body>
 </html>
