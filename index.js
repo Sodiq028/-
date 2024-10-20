@@ -36,7 +36,7 @@ let mode2 = document.getElementById("mode2");
 let mode_icon2 = document.getElementById("mode_icon2");
 
 burger_btn.addEventListener("click", () => {
-    burger_menu.classList.toggle("-translate-x-[600px]")
+    burger_menu.classList.toggle("-translate-x-[1100px]")
 })
 
 mode2.addEventListener("click", () => {
