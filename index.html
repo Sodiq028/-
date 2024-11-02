@@ -1,389 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ДОМ</title>
-    <link rel="stylesheet" href="style.css">
     <link
       rel="shortcut icon"
       href="./images/ДОМ logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        container: {
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
             center: true,
             padding: "20px",
           },
           fontFamily: {
             geo: ["Geologica"],
           },
-        extend: {
-          colors: {
-            bg_col: "var(--bg-col)",
-            m_burger: "var(--m_burger)",
-            m_yellow: "var(--m_yellow)",
-            m_gray: "var(--m_gray)",
-            m_black: "var(--m_black)",
-            m_white: "var(--m_white)",
-            foot: "var(--foot)",
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    @layer base {
-        :root {
-            --bg-col: #F5F5F5;
-            --m_burger: #e9e9e9;
-            --m_yellow: #FFEB39;
-            --m_gray: #828282;
-            --m_black: #000000;
-            --m_white: #FFFFFF;
-            --foot: #4F4F4F;
-        }
-
-        .dark {
-            --bg-col: #3a3a3a;
-            --m_burger: #4d4d4d;
-            --m_gray: #fff;
-            --m_black: #fff;
-            --m_white: #1b1b1b;
-        }
-    }
-  </style>
-</head>
-<body class="bg-bg_col duration-500">
-  <div id="loader" class="w-[95vw] h-[95vh] flex justify-center items-center">
-    <div class="w-10 h-10 border-4 border-t-m_yellow border-gray-300 rounded-full animate-spin"></div>
-  </div>
-  <div
-  id="burger_menu"
-  class="h-screen w-[85%] border-l-0 border-t-0 border-b-0 border-r-[1px] border-m_black lg:hidden flex flex-col items-start justify-start gap-6 p-[40px] -translate-x-[1100px] bg-m_burger z-50 fixed duration-500"
->
-  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
-    Домой
-  </button>
-  <div class="h-[1px] w-[100%] bg-white"></div>
-  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
-    О нас
-  </button>
-  <div class="h-[1px] w-[100%] bg-white"></div>
-  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
-    Контакты
-  </button>
-  <div class="h-[1px] w-[100%] bg-white"></div>
-  <button class="font-geo text-m_black hover:text-m_yellow duration-300">
-    Сервис
-  </button>
-  <div class="h-[1px] w-[100%] bg-white"></div>
-  <button id="mode2">
-    <img
-      id="mode_icon2"
-      class="cursor-pointer"
-      src="https://cdn2.iconfinder.com/data/icons/canoopi-mobile-contact-apps/32/Dark_Theme-512.png"
-      alt=""
-      width="30"
-    />
-  </button>
-  <h1 class="font-geo text-lg text-m_black text-center">Made by <span class="text-yellow-500 underline cursor-pointer">Student</span></h1>
-  </div>
-    <header id="body" class="container sticky z-40 top-0 bg-bg_col duration-500 bg-bg-col flex flex-row items-center justify-between h-[80px]">
-      <div class="flex flex-row items-center gap-1">
-        <img src="/images/ДОМ logo.png" alt="" width="57" height="28">
-        <h1 class="text-m_black font-medium">Страхование</h1>
-      </div>
-      <ul class="hidden lg:flex flex-row items-center justify-center gap-20 mr-16">
-        <li class="font-geo relative duration-300 active:text-m_yellow before:absolute before:w-[0%] before:h-[2px] before:top-[-1px] before:left-0 before:bg-m_yellow before:duration-300 before:rounded-[20px] hover:before:w-[100%] after:absolute after:w-[0%] after:h-[2px] after:bottom-[-1px] after:right-0 after:bg-m_yellow after:duration-300 after:rounded-[20px] hover:after:w-[100%] text-m_black cursor-pointer">Домой</li>
-        <li class="font-geo relative duration-300 active:text-m_yellow before:absolute before:w-[0%] before:h-[2px] before:top-[-1px] before:left-0 before:bg-m_yellow before:duration-300 before:rounded-[20px] hover:before:w-[100%] after:absolute after:w-[0%] after:h-[2px] after:bottom-[-1px] after:right-0 after:bg-m_yellow after:duration-300 after:rounded-[20px] hover:after:w-[100%] text-m_black cursor-pointer">О нас</li>
-        <li class="font-geo relative duration-300 active:text-m_yellow before:absolute before:w-[0%] before:h-[2px] before:top-[-1px] before:left-0 before:bg-m_yellow before:duration-300 before:rounded-[20px] hover:before:w-[100%] after:absolute after:w-[0%] after:h-[2px] after:bottom-[-1px] after:right-0 after:bg-m_yellow after:duration-300 after:rounded-[20px] hover:after:w-[100%] text-m_black cursor-pointer">Контакты</li>
-        <li class="font-geo relative duration-300 active:text-m_yellow before:absolute before:w-[0%] before:h-[2px] before:top-[-1px] before:left-0 before:bg-m_yellow before:duration-300 before:rounded-[20px] hover:before:w-[100%] after:absolute after:w-[0%] after:h-[2px] after:bottom-[-1px] after:right-0 after:bg-m_yellow after:duration-300 after:rounded-[20px] hover:after:w-[100%] text-m_black cursor-pointer">Сервис</li>
-      </ul>
-      <div class="flex flex-row items-center gap-4">
-        <button class="hidden lg:flex" id="mode">
-          <img
-            id="mode_icon"
-            class="flex cursor-pointer"
-            src="https://cdn2.iconfinder.com/data/icons/canoopi-mobile-contact-apps/32/Dark_Theme-512.png"
-            alt=""
-            width="20"
+          extend: {
+            colors: {
+              m_yellow: "#FFEB39",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body id="body" class="bg-[#F5F5F5]">
+    <div class="w-full h-[100vh] flex items-center justify-center">
+      <form
+        id="form"
+        class="bg-white w-[300px] sm:w-[350px] h-[400px] rounded-[30px] flex items-center justify-center shadow-2xl"
+      >
+        <div class="flex flex-col items-center justify-center gap-7">
+          <h1
+            class="font-geo font-medium text-lg sm:text-xl flex flex-row items-center gap-2"
+          >
+            Добро пожаловать в
+            <span
+              ><img src="/images/ДОМ logo.png" width="57" height="28" alt=""
+            /></span>
+          </h1>
+          <input
+            id="input"
+            class="px-[10px] sm:px-[30px] py-[10px] font-geo rounded-2xl outline-none text-lg border border-gray-400"
+            type="text"
+            placeholder="Ваш email"
           />
-        </button>
-        <img class="cursor-pointer" src="/images/user.png" alt="">
-        <img id="burger" class="lg:hidden cursor-pointer" src="/images/burger.png" alt="">
-      </div>
-    </header>
-    <main id="body2">
-      <section class="container mt-[20px] h-[500px] lg:h-[300px] flex flex-col gap-8 lg:gap-14">
-        <div class="flex flex-col items-center justify-center gap-3">
-          <h1 class="text-m_black font-geo font-medium text-[30px] text-center">Страхование 
-            ипотеки</h1>
-          <p class="text-m_black font-geo font-light text-[16px] text-center">Минимальная цена на обязательное ипотечное страхование</p>
+          <input
+            id="password"
+            class="px-[10px] sm:px-[30px] py-[10px] font-geo rounded-2xl outline-none text-lg border border-gray-400"
+            type="password"
+            placeholder="Пароль"
+          />
+          <button
+            id="modalOpen"
+            type="submit"
+            class="bg-m_yellow hover:bg-transparent active:bg-m_yellow border border-m_yellow duration-300 text-black font-geo px-[100px] sm:px-[120px] py-[10px] rounded-2xl"
+          >
+            Вход
+          </button>
         </div>
-        <div class="bg-m_white duration-500 lg:hidden rounded-[30px] h-[289px] flex flex-col p-[20px] gap-2">
-          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Тип объекта</h1>
-              <h1 class="text-m_black font-geo text-[16px]">Квартира</h1>
-            </div>
-            <img src="/images/Arrow_dropdown.png" alt="">
-          </div>
-          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Банк кредитор</h1>
-              <h1 class="text-m_black font-geo text-[16px]">Сбербанк</h1>
-            </div>
-            <img src="/images/Arrow_dropdown.png" alt="">
-          </div>
-          <div class="cursor-pointer duration-500 flex flex-row items-center justify-between bg-bg_col w-full h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Остаток по ипотеке, ₽</h1>
-              <h1 class="text-m_black font-geo text-[16px]">100 000 ₽</h1>
-            </div>
-          </div>
-          <button class="bg-m_yellow border border-m_yellow hover:bg-transparent active:bg-m_yellow duration-300 py-[15px] rounded-[10px] font-geo text-m_black text-[17px]">Показать цены</button>
-        </div>
-        <div class="hidden lg:flex flex-row gap-2 items-center justify-center">
-          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Тип объекта</h1>
-              <h1 class="text-m_black font-geo text-[16px]">Квартира</h1>
-            </div>
-            <img src="/images/Arrow_dropdown.png" alt="">
-          </div>
-          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Банк кредитор</h1>
-              <h1 class="text-m_black font-geo text-[16px]">Сбербанк</h1>
-            </div>
-            <img src="/images/Arrow_dropdown.png" alt="">
-          </div>
-          <div class="cursor-pointer flex flex-row items-center justify-between bg-m_white w-[217px] h-[58px] px-[15px] rounded-xl">
-            <div class="flex flex-col">
-              <h1 class="text-m_gray font-geo text-[11px]">Остаток по ипотеке, ₽</h1>
-              <h1 class="text-m_black font-geo text-[16px]">100 000 ₽</h1>
-            </div>
-          </div>
-          <button class="bg-m_yellow border border-m_yellow hover:opacity-60 active:opacity-50 duration-300 px-10 py-[15px] rounded-[10px] font-geo text-black text-[17px]">Показать цены</button>
-        </div>
-        </div>
-      </section>
-      <section class="container">
-        <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[30px]" width="294" src="https://s3-alpha-sig.figma.com/img/86b0/bf77/576b0796dbdf53b116db6dc02be74ec9?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BImcjA7WSuEOV6fwSXsdt46z-8KOEKYIXuKi47mzPwfyAgnHYowgozFkpGlPBxjvQlqUQubiLpjO1U6eKEOUsNb3kpfkYFCKviHSULKzGurE0FOso~4f2cjc7uzHrNwJufBcAHrd2oPmtWaKmFEIQkENYCDbyg9yYBKDAcydR~LTeJtcgVZWbCd-0pJOBtfhePMFgMk3B6bJbi2yDSIJXvNDDCW551Bm3BzWn4nMjxLym9HgNtHiy2R0ZenEUqeUEIDFILykEYZSP6-gwFClmHMVeXtKFW8v51Xdwnys8B9~SzQEPnEsAnqNHdqE8ZRc4ICe7h3VlhnnQQmztv4yyg__" alt="">
-            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
-            </div>
-          </div>
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[30px] h-[300px]" width="294" src="https://s3-alpha-sig.figma.com/img/78b9/1c84/a645f613fc778beb313e5fc543bf5432?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b3ZkyTnJXI~nMY9YAmoDGFAx6BUUBadKqTbrfdCNH5EOq~M3xdEJCc5ay~OArrW~nKn6s6a99rDbPX~cEzT3qRBpX0Kv-OhT~OY46oN4RZMWpd-eOavbmdkLRREzGZVX-xrtz3z~Kw-yFabpn2BN9fkqpCM9vPBw4Fn5XBn2fZBbezvB6xdt7UBYYGNQAQ~sNwrAmGrbRUwlV1YlacvmwxoveKced5AWV8PXBANgRceyS-vW8Lz2Hx1MnlZvbvk-yPpzdnqe4-rR9VIBtn-GU0ZbSUe67G2zIQOdedie3-4ZxVjfKHc7eAVZZSJPi1YYxb~QmSsVY1JpjOTcRaNRsA__" alt="">
-            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
-            </div>
-          </div>
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[30px]" width="294" src="https://s3-alpha-sig.figma.com/img/0181/f494/565c83430d4c32e99592f2e34f5d7bfb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EPoSTbKlxIKd7WmLXHekT4o5WZVGWgUDFxWObiYvrVQUDfth86BDqro-cCQHD0wuYxfElbB4MQ4cD6pZlVQ32x5Nv2~faNwKgz3~mJ9Czjos7hfsnMECScYNYIJGCaGqy3C5mJg-VUHCcM8fizJYH2IFC0DBzYbiBNsY-O3min~VPGxa1UaZ~vA30B1x-6EksCyLskWI45Y0Twzr4oqWTFWmVbEubxCtpyjd~TAxvOVgg8UE9xQBHwrRnXDdML9LixgVb3XOuEHQFfLBptCIMWvhmBOgxTVue86V-lKV2wI0heDfC0TBHAUmUfO7bPJ2FqI2vO9ZuYJl7lOY6IR~iA__" alt="">
-            <div class="bg-m_white duration-500 flex flex-col items-start justify-center absolute top-[160px] rounded-[30px] px-[30px] py-[10px] h-[177px]">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Надежный партнер</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Ваш банк примет любой купленный у нас полис. Его можно передать по электронной почте или в отделении банка.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="duration-500 container h-[1600px] bg-m_white lg:h-[700px] mt-[50px] rounded-[60px] flex flex-col items-center justify-center gap-5">
-        <h1 class="font-geo text-start w-[300px] lg:w-[700px] lg:text-center text-m_black text-[24px] lg:text-[36px]">
-          Полис нужен, чтобы оформить ипотеку. Выбирайте его по ситуации:
+      </form>
+      <div
+        id="modal"
+        class="flex flex-col items-center justify-center duration-500 gap-7 py-[20px] fixed rounded-[30px] z-50 bg-white m-auto top-0 bottom-0 right-0 left-0 w-[80%] sm:w-[45%] h-[200px] shadow-[-1px_7px_32px_-4px_#FFEB39]"
+      >
+        <h1
+          class="font-geo font-semibold text-m_black text-sm md:text-2xl w-[70%] text-center"
+        >
+          Произошла ошибка! Повторите попытку
         </h1>
-        <div class="flex flex-col gap-20 lg:flex-row lg:gap-5 items-center justify-center">
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[10px]" width="294" src="https://s3-alpha-sig.figma.com/img/eb52/ba5d/25e55e7b257eeb27a6ca0d8b6276fc4a?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XWTYquzLO5643IJ9R-RIDBFZRPXQQ9OdoE8z9gxuBfKOF-TWgT1eNCZjuZD22GOk7cuKsW7LJIB3mHRqqHqTLXcHOyxevDhVqBDGYZNOCl5P0gDqjO6A27OE3z~ajZRjDIxH99vNN0RYtjIlyDZ1ptbqIiKhe7uqA1NeTBN79F8wN34GCSx4X9uKtCvI39MDO9oIepmoOvVfhwnf7Iu9Ev3nFbMfrfXpWpk7FE92f-IziMbLWciaR-euyikCIU5YABzFJu4cVFJlgcgoCPb2SNGxGJnWk7dqqKzzxNQTH2ejPzDhZzu3WKUDFjL3oAXY2PKNjX8Z7K12kXB7g9oVIA__" alt="">
-            <div class="bg-bg_col duration-500 flex flex-col items-start justify-center absolute top-[160px] gap-2 rounded-[10px] px-[30px] py-[10px] h-[246px]">
-              <img src="/images/home.png" alt="">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Страхование недвижимости</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Требуется, когда дом уже построили, а вы получили право собственности. Будут застрахованы только несущие конструкции здания. Ремонт и отделка включены не будут.</p>
-            </div>
-          </div>
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[10px] h-[300px]" width="294" src="https://s3-alpha-sig.figma.com/img/fb7b/ca4e/c647329de316494fc909ded2eed3177a?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=F1eLdzhQJGpk5rAyTE-tsfdXmSJS1kQXagJt9p1vZu2jEoreWI75hL5csnxNcSZqmfcGhGdPU5zjPPsWZwfN-mHjIEat2Qw6XKrIu1xDoNuD9~uIld1qZ~JJQaNsUrHSNdAeU3SJFjmoV5g5TBNCwGMdBPPi2xbr2K5xK5Mgja9vmkY-YTELAE9bIDfzN4qaQxiD5wYFDRmIfup6OFpjKpuVYemXDDjGPrxcySA1mg43lOtsmCCpzbEdJXwvnRWUZZ3dDC052H8fCJE19pjbGadX9SdGf5I9NLwoo0nTM-SO-4vUSU1VO8dedMa-yUN47XzAAbmQ~JZiOzi3tYZtNQ__" alt="">
-            <div class="bg-bg_col duration-500 flex flex-col items-start justify-center absolute top-[160px] gap-2 rounded-[10px] px-[30px] py-[10px] h-[246px]">
-              <img src="/images/heart.png" alt="">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Страхование жизни и здоровья заёмщика</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Может потребоваться, если при оформлении ипотеки дом ещё не построен, и не получено право собственности. Будут застрахованы жизнь и здоровье заёмщика.</p>
-            </div>
-          </div>
-          <div class="w-[294px] h-[355px] relative">
-            <img class="rounded-t-[10px]" width="294" src="https://s3-alpha-sig.figma.com/img/0292/2ab0/e3b2f1a483870c5bec1d3f86aa471793?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QIpU46bmvtkj2P11YYtwPwAeGtiNAETFd8YUNGvOfmXFX82jD5CjppIAliYyj8v1VjpesI9qfIVCXcZZMXeZ2bp5A9JW1fDshs-EXB~F7mfzWD1MtoVYNbVQd69fdQGkvhehDGuxHHlGBIbJRPJUDqeQj7ap-~7qDldzWEYgUY~QqHe4zWYUui1GlhFSBeWU0ynvVplRueGRHPCjc0cAokjmuLJ4f5pGHvhWd2-oE7lJnx~QfIzrzLBzgZ50lG1ZnxTbJXSUuDgelCBRj9PH1CqZOUWvO0SuOT5yPgBt9DQIV4mLU-RUkZ5GQJZJWM49r~ora4HreN7Dcm6LcELafg__" alt="">
-            <div class="bg-bg_col duration-500 flex flex-col items-start justify-center absolute top-[160px] gap-2 rounded-[10px] px-[30px] py-[10px] h-[246px]">
-              <img src="/images/home (1).png" alt="">
-              <h1 class="font-geo font-semibold text-lg text-m_black">Комбинированный полис страхования</h1>
-              <p class="font-geo text-m_gray font-light text-sm">Полис, который включает сразу страхование жилья и жизни заёмщика. Как правило, банки рекомендуют своим клиентам оформить именно этот вид страхования.</p>
-            </div>
-          </div>
-        </div>
-        <button class="mt-[50px] bg-m_yellow border border-m_yellow hover:opacity-60 active:opacity-50 duration-300 px-[50px] lg:px-[150px] py-[18px] rounded-[10px] font-geo text-black text-[17px]">Подобрать полис</button>
-      </section>
-      <section class="container h-[470px] md:h-[350px] mt-[50px]">
-        <div class=" flex flex-col gap-5 lg:gap-14 md:items-center md:justify-center md:flex-row">
-          <img src="/images/Rectangle 198.png" alt="" width="390" height="300">
-          <div class="flex flex-col gap-5">
-            <h1 class="hidden lg:flex font-geo text-[36px] text-m_black">Aкции</h1>
-            <div class="flex flex-row md:flex-col lg:flex-row gap-5 md:overflow-x-hidden overflow-x-scroll overflow-y-hidden">
-              <div class="duration-500 bg-m_white flex flex-col items-start justify-center p-[20px] w-[260px] h-[142px] rounded-[10px]">
-                <h1 class="font-geo w-[200px] font-light text-[16px] text-m_black">Скидка 15% на страхование имущества</h1>
-                <p class="font-geo w-[200px] text-m_gray font-light text-sm">Защити свою квартиру от непредвиденных ситуаций</p>
-              </div>
-              <div class="duration-500 bg-m_white flex flex-col items-start justify-center p-[20px] w-[260px] h-[142px] rounded-[10px]">
-                <h1 class="font-geo w-[200px] font-light text-[16px] text-m_black">«Инвитро» - забота о вашем здоровье со скидкой 20%</h1>
-                <p class="font-geo w-[200px] text-m_gray font-light text-sm">Закажи анализы рядом с домом</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="container mt-[50px] xl:px-[80px] h-[570px]">
-        <div class="flex flex-col gap-7 items-center lg:flex-row justify-between">
-          <div class="flex flex-col gap-5">
-            <h1 class="font-geo text-m_black text-2xl text-center lg:text-start">Частые вопросы</h1>
-            <details>
-              <summary id="sum" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px]">Зачем нужна страховка</h1>
-                <img id="arrow" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-            <div class="bg-m_gray w-full h-[1px]"></div>
-            <details>
-              <summary id="sum2" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px]">Какие данные нужны для оформления страховки?</h1>
-                <img id="arrow2" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-            <div class="bg-m_gray w-full h-[1px]"></div>
-            <details>
-              <summary id="sum3" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px]">Цены действительно ниже, чем у других компаний?</h1>
-                <img id="arrow3" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-            <div class="bg-m_gray w-full h-[1px]"></div>
-            <details>
-              <summary id="sum4" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px] lg:w-[500px]">Будет ли действителен электронный полис в отличие от бумажного?</h1>
-                <img id="arrow4" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-            <div class="bg-m_gray w-full h-[1px]"></div>
-            <details>
-              <summary id="sum5" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px] lg:w-[500px]">Сколько времени нужно на оформление полиса и где будет доступен документ?</h1>
-                <img id="arrow5" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-            <div class="bg-m_gray w-full h-[1px]"></div>
-            <details>
-              <summary id="sum6" class="list-none cursor-pointer flex flex-row justify-between items-center">
-                <h1 class="font-geo font-light text-m_black text-[16px]">Какой вид страхования вы предоставляете?</h1>
-                <img id="arrow6" class="duration-300" src="/images/Arrow_dropdown.png" alt="">
-              </summary>
-              <p class="lg:w-[500px] font-geo font-light text-sm text-m_gray">Ипотечное страхование — это обязательная процедура при оформлении жилищногокредита. Страховка при ипотеке даёт защиту не только кредитной организации, но изаёмщику.</p>
-            </details>
-          </div>
-          <img class="hidden lg:flex rounded-r-[30px]" src="/images/Rectangle 11 (1).png" alt="">
-        </div>
-      </section>
-      <section class="container h-[400px] lg:h-[300px] flex flex-col justify-center gap-8">
-        <h1 class="font-geo text-4xl text-m_black">Новости</h1>
-        <div class="flex flex-row gap-5 overflow-x-scroll overflow-y-hidden">
-            <div class="bg-m_white duration-500 w-[294px] flex flex-col items-start justify-center rounded-[30px] px-[30px] py-[10px] h-[180px]">
-              <h1 class="font-geo w-56 font-semibold text-lg text-m_black">Судебная коллегия встала на сторону дольщиков</h1>
-              <p class="font-geo w-56 text-m_gray font-light text-sm">Делимся простым списком действий который поможет в спорах с недобросовестным застройщиком.</p>
-            </div>
-            <div class="bg-m_white duration-500 w-[294px] flex flex-col items-start justify-center rounded-[30px] px-[30px] py-[10px] h-[180px]">
-              <h1 class="font-geo w-56 font-semibold text-lg text-m_black">Дольщики выиграли компенсацию</h1>
-              <p class="font-geo w-56 text-m_gray font-light text-sm">Оформляйте полис на любой тип недвижимости, а также жизнь и здоровье за 10 минут. Не нужно  никуда ехать.</p>
-            </div>
-            <div class="bg-m_white duration-500 w-[294px] flex flex-col items-start justify-center rounded-[30px] px-[30px] py-[10px] h-[180px]">
-              <h1 class="font-geo w-64 font-semibold text-lg text-m_black">В стране растет спрос на ипотечное страхование</h1>
-              <p class="font-geo w-64 text-m_gray font-light text-sm">Недавно Владимир Путин предложил снизить ставку по льготной ипотеке до 7%, и это спровоцировало рост интереса россиян к страхованию ипотеки.</p>
-            </div>
-            <div class="bg-m_white duration-500 w-[294px] flex flex-col items-start justify-center rounded-[30px] px-[30px] py-[10px] h-[180px]">
-              <h1 class="font-geo w-56 font-semibold text-lg text-m_black">Страховать квартиры становится проще</h1>
-              <p class="font-geo w-56 text-m_gray font-light text-sm">Для заключения договора по страхованию россияне все чаще обращаются к агрегаторам, а не страхуют недвижимость напрямую в банках.</p>
-            </div>
-        </div>
-      </section>  
-    </main>
-    <footer id="body3" class="bg-foot mt-[50px] h-[770px] lg:h-[500px] rounded-t-[30px] lg:rounded-t-[60px] flex flex-col justify-center items-center">
-      <div class="flex flex-col lg:w-[1000px] lg:flex-row justify-between items-center py-[30px] gap-5 px-[25px]">
-        <div class="flex flex-col gap-4">
-          <h1 class="text-white font-geo text-2xl lg:text-4xl">Остались вопросы? </h1>
-          <h1 class="text-white font-geo font-light text-[16px] flex gap-5">8 ( 804 ) 700 42 30 <span class="text-[#828282] hidden lg:flex">Москва</span></h1>
-          <h1 class="text-white hidden font-geo font-light text-[16px] lg:flex gap-5">8 ( 804 ) 700 42 30 <span class="text-[#828282] hidden lg:flex">Россия</span></h1>
-        </div>
-        <button class="lg:hidden bg-m_yellow border border-m_yellow hover:bg-transparent active:bg-m_yellow hover:text-white duration-300 px-[35px] lg:px-[150px] py-[18px] rounded-[10px] font-geo text-black text-[17px]">Оформить с менеджером</button>
-        <div class="hidden lg:flex flex-col items-center gap-5">
-          <h1 class="font-geo font-light text-[16px] text-white w-[393px]">Наши опытные менеджеры готовы помочь вам  оформить страховку под ваш запрос.</h1>
-          <button class="bg-m_yellow border border-m_yellow hover:bg-transparent active:bg-m_yellow hover:text-white duration-300 px-[35px] lg:px-[90px] py-[18px] rounded-[10px] font-geo text-black text-[17px]">Оформить с менеджером</button>
-        </div>
+        <p class="font-geo text-center font-light text-m_gray w-[70%]">
+          Email или пароль не верны
+        </p>
+        <button
+          id="closeBtn"
+          class="absolute top-5 right-4 text-2xl bg-m_yellow px-2 py-1 hover:shadow-[0px_5px_10px_3px_#FFEB39] duration-500 rounded-full text-center flex items-center justify-center"
+        >
+          <i class="fa-solid fa-xmark" style="color: black"></i>
+        </button>
       </div>
-      <div class="container flex flex-col items-center lg:flex-row lg:justify-between lg:w-[1000px]">
-        <div class="flex flex-col items-start justify-center">
-          <div class="flex flex-col items-start justify-center">
-            <div class="flex flex-row items-center gap-2">
-              <img src="/images/ДОМ logo.png" alt="" width="57" height="28">
-              <h1 class="text-white font-light text-[18px]">Страхование</h1>
-            </div>
-            <p class="font-geo font-light text-sm text-[#CCCCCC] w-[317px]">Минимальная цена на обязательное ипотечное страхование</p>
-          </div>
-          <div class="flex flex-row items-center justify-start gap-7 mt-[30px]">
-            <div class="flex flex-col items-start gap-2">
-              <h1 class="font-geo text-[16px] text-white">Услуги</h1>
-              <ul>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Страхование ипотеки</li>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Личный кабинет</li>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Новостройки</li>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Банки</li>
-              </ul>
-            </div>
-            <div class="flex flex-col items-start gap-2">
-              <h1 class="font-geo text-[16px] text-white">Информация</h1>
-              <ul>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">О компании</li>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Новости</li>
-                <li class="font-geo font-light text-[#CCCCCC] text-sm">Контакты</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="mt-[30px] flex flex-col gap-5">
-          <div class="flex flex-col items-start justify-center gap-2">
-            <h1 class="font-geo underline cursor-pointer font-light text-sm text-[#CCCCCC]">Обработка персональных данных</h1>
-            <h1 class="font-geo underline cursor-pointer font-light text-sm text-[#CCCCCC]">Политика конфеденциальности</h1>
-            <h1 class="font-geo underline cursor-pointer font-light text-sm text-[#CCCCCC]">Правовая информация</h1>
-          </div>
-          <p class="font-geo font-light text-[#CCCCCC] text-[9px] w-[300px]">Сайт использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом.Если вы не хотите использовать файлы «cookie», изменитенастройки браузера.</p>
-          <div class="w-[300px] flex items-center justify-center">
-            <img src="/images/PAY_LOGOS.png" alt="" width="300">
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
 
-    <script src="/index.js"></script>
-</body>
+    <script src="/login.js"></script>
+  </body>
 </html>
